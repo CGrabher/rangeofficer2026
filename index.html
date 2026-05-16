@@ -21,7 +21,7 @@
   --txt:#f0f2f5;--muted:#606878;--sub:#98a0ac;
   --fh:'Inter',sans-serif;--fm:'JetBrains Mono',monospace;--fb:'Inter',sans-serif;
 }
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body{background:var(--bg);color:var(--txt);font-family:var(--fb);font-size:16px;line-height:1.65;min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
 /* HEADER */
@@ -199,6 +199,26 @@ main{max-width:900px;margin:0 auto;padding:24px 16px 100px}
 .div-yes{color:var(--green);font-weight:600}
 .div-no{color:var(--red);font-weight:600}
 .div-sp{color:var(--gold);font-weight:600}
+/* MOBILE DIVISION CARDS */
+.div-cards{display:none;flex-direction:column;gap:10px;margin-bottom:16px}
+@media(max-width:650px){.div-scroll{display:none}.div-tip-desktop{display:none}.div-cards{display:flex}}
+@media(min-width:651px){.div-tip-mobile{display:none}}
+.div-mcard{background:var(--p2);border:1px solid var(--b1);border-radius:10px;overflow:hidden;cursor:pointer;transition:border-color .2s}
+.div-mcard.open{border-color:var(--gld3)}
+.div-mcard-head{display:flex;align-items:center;gap:10px;padding:14px 16px}
+.div-mcard.open .div-mcard-head{border-bottom:1px solid var(--gld3)}
+.div-mcard-info{flex:1;min-width:0}
+.div-mcard-name{font-family:var(--fh);font-size:17px;font-weight:800;color:var(--txt)}
+.div-mcard-app{font-family:var(--fm);font-size:10px;color:var(--gold);margin-top:2px}
+.div-mcard-stats{display:flex;gap:10px;align-items:center;flex-shrink:0}
+.div-mcard-pf{text-align:center}
+.div-mcard-pf-lbl{font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:.5px;line-height:1}
+.div-mcard-pf-val{font-family:var(--fh);font-size:15px;font-weight:700;color:var(--gold);line-height:1.3}
+.div-mcard-badge{font-size:10px;padding:2px 6px;border-radius:3px;font-weight:700;font-family:var(--fm);letter-spacing:.5px;display:block;text-align:center}
+.div-mcard-arr{color:var(--muted);font-size:16px;transition:transform .2s,color .2s;flex-shrink:0;margin-left:2px}
+.div-mcard.open .div-mcard-arr{transform:rotate(90deg);color:var(--gold)}
+.div-mcard-body{display:none;padding:0 16px 16px}
+.div-mcard.open .div-mcard-body{display:block}
 
 /* GLOSSARY */
 .gl-search{display:flex;gap:10px;margin-bottom:18px}
@@ -455,11 +475,12 @@ main{max-width:900px;margin:0 auto;padding:24px 16px 100px}
 <!-- DIVISIONEN -->
 <div id="sdiv" class="sec">
   <div class="shead"><div class="stitle">Divisionen</div><div class="ssub">// Appendix D1–D6 · alle 7 Divisionen · Stand 2026</div></div>
-  <div class="box-gold"><b>Tipp:</b> Scrolle die Tabelle horizontal für alle Spalten. Tippe auf eine Division für Details.</div>
+  <div class="box-gold div-tip-desktop"><b>Tipp:</b> Scrolle die Tabelle horizontal für alle Spalten. Tippe auf eine Division für Details.</div>
+  <div class="box-gold div-tip-mobile"><b>Tipp:</b> Tippe auf eine Division für Details.</div>
   <div class="div-scroll">
     <table class="div-table" id="divTable"></table>
   </div>
-  <div id="divCards"></div>
+  <div class="div-cards" id="divCards"></div>
 </div>
 
 <!-- MATCH LEVELS -->
@@ -1245,6 +1266,70 @@ const divHdr=['Division','Appendix','Major PF','Minor PF','Optik','Kompensator',
 let divHtml='<tr>'+divHdr.map(h=>'<th>'+h+'</th>').join('')+'</tr>';
 DIVS.forEach((d,i)=>{divHtml+='<tr id="divRow'+i+'" style="cursor:pointer" onclick="divToggle('+i+')" title="Details anzeigen"><td class="dn">'+d.name+' <span id="divArr'+i+'" style="font-size:13px;color:var(--muted);display:inline-block;transition:transform .2s,color .2s;margin-left:4px">›</span></td><td style="font-family:var(--fm);font-size:12px;color:var(--gold)">'+d.app+'</td><td class="div-sp">'+d.major+'</td><td class="div-sp">'+d.minor+'</td><td class="'+(d.optics==='Nein'?'div-no':d.optics==='Pflicht'?'div-yes':'div-sp')+'">'+d.optics+'</td><td class="'+(d.comp==='Nein'||d.comp.startsWith('Nein')?'div-no':'div-yes')+'">'+d.comp+'</td><td style="color:var(--sub);font-size:13px">'+d.boxsize+'</td><td style="font-size:13px;color:var(--sub)">'+d.notes+'</td></tr>';});
 document.getElementById('divTable').innerHTML=divHtml;
+
+// Mobile division cards
+(function(){
+  const container=document.getElementById('divCards');
+  container.innerHTML=DIVS.map((d,i)=>{
+    const optC=d.optics==='Nein'?'var(--red)':d.optics==='Pflicht'?'var(--green)':'var(--gold)';
+    const optBg=d.optics==='Nein'?'var(--red2)':d.optics==='Pflicht'?'var(--grn2)':'var(--gld2)';
+    const cmpC=d.comp==='Nein'||d.comp.startsWith('Nein')?'var(--red)':'var(--green)';
+    const cmpBg=d.comp==='Nein'||d.comp.startsWith('Nein')?'var(--red2)':'var(--grn2)';
+    const majC=d.major==='N/A'?'var(--muted)':'var(--gold)';
+    return `<div class="div-mcard" id="divMCard${i}" onclick="divCardToggle(${i})">
+      <div class="div-mcard-head">
+        <div class="div-mcard-info">
+          <div class="div-mcard-name">${d.name}</div>
+          <div class="div-mcard-app">Appendix ${d.app}</div>
+        </div>
+        <div class="div-mcard-stats">
+          ${d.major!=='N/A'?`<div class="div-mcard-pf"><div class="div-mcard-pf-lbl">MAJ</div><div class="div-mcard-pf-val">${d.major}</div></div>`:''}
+          <div class="div-mcard-pf"><div class="div-mcard-pf-lbl">MIN</div><div class="div-mcard-pf-val">${d.minor}</div></div>
+          <div style="display:flex;flex-direction:column;gap:3px">
+            <span class="div-mcard-badge" style="background:${optBg};color:${optC}">OPT</span>
+            <span class="div-mcard-badge" style="background:${cmpBg};color:${cmpC}">CMP</span>
+          </div>
+        </div>
+        <span class="div-mcard-arr">›</span>
+      </div>
+      <div class="div-mcard-body">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px">
+          <div style="background:var(--p3);padding:12px;border-radius:8px;border:1px solid var(--b1)">
+            <div style="font-family:var(--fm);font-size:10px;color:var(--muted);letter-spacing:1px;margin-bottom:4px">MAJOR PF</div>
+            <div style="font-family:var(--fh);font-size:22px;font-weight:700;color:${majC}">${d.major}</div>
+          </div>
+          <div style="background:var(--p3);padding:12px;border-radius:8px;border:1px solid var(--b1)">
+            <div style="font-family:var(--fm);font-size:10px;color:var(--muted);letter-spacing:1px;margin-bottom:4px">MINOR PF</div>
+            <div style="font-family:var(--fh);font-size:22px;font-weight:700;color:var(--gold)">${d.minor}</div>
+          </div>
+          <div style="background:var(--p3);padding:12px;border-radius:8px;border:1px solid var(--b1)">
+            <div style="font-family:var(--fm);font-size:10px;color:var(--muted);letter-spacing:1px;margin-bottom:4px">OPTIK</div>
+            <div style="font-family:var(--fh);font-size:16px;font-weight:700;color:${optC}">${d.optics}</div>
+          </div>
+          <div style="background:var(--p3);padding:12px;border-radius:8px;border:1px solid var(--b1)">
+            <div style="font-family:var(--fm);font-size:10px;color:var(--muted);letter-spacing:1px;margin-bottom:4px">KOMPENSATOR</div>
+            <div style="font-family:var(--fh);font-size:13px;font-weight:700;line-height:1.3;color:${cmpC}">${d.comp}</div>
+          </div>
+        </div>
+        <div style="background:var(--p3);padding:12px;border-radius:8px;border:1px solid var(--b1);margin-bottom:12px">
+          <div style="font-family:var(--fm);font-size:10px;color:var(--muted);letter-spacing:1px;margin-bottom:4px">BOXTEST / LAUF</div>
+          <div style="font-size:13px;color:var(--txt);line-height:1.5">${d.boxsize||'–'}</div>
+        </div>
+        ${d.desc?`<div style="font-family:var(--fm);font-size:10px;color:var(--muted);letter-spacing:1px;margin-bottom:10px">DETAILS & REGELN</div>
+        <div style="display:flex;flex-direction:column;gap:7px">
+          ${d.desc.map(s=>`<div style="display:flex;gap:10px;font-size:14px;color:var(--sub);line-height:1.6"><span style="color:var(--gold);flex-shrink:0;margin-top:1px">›</span><span>${s}</span></div>`).join('')}
+        </div>`:''}
+      </div>
+    </div>`;
+  }).join('');
+})();
+
+function divCardToggle(i){
+  const card=document.getElementById('divMCard'+i);
+  const wasOpen=card.classList.contains('open');
+  document.querySelectorAll('.div-mcard').forEach(c=>c.classList.remove('open'));
+  if(!wasOpen)card.classList.add('open');
+}
 
 function divToggle(i){
   const d=DIVS[i];

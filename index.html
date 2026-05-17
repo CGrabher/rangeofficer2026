@@ -478,6 +478,332 @@ main{max-width:900px;margin:0 auto;padding:24px 16px 100px}
 
   <div class="box-blue"><b>Scoring-Signale (Appendix F1):</b></div>
   <div class="sig-grid" id="sigGrid"></div>
+
+  <!-- TARGET ARRAY BOOK 2019 -->
+  <div style="margin-top:36px;padding-top:24px;border-top:2px solid var(--b2)">
+    <div style="font-family:var(--fh);font-size:18px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--gold);margin-bottom:4px">Target Array Book</div>
+    <div style="font-family:var(--fm);font-size:11px;color:var(--muted);letter-spacing:.5px;margin-bottom:20px">// Januar 2019 Edition · Regel 4.1.1.2 · Zulässige &amp; unzulässige Anordnungen</div>
+  </div>
+
+  <!-- SECTION 1: Individual Targets -->
+  <div class="box-gold" style="margin-bottom:10px"><b>Abschnitt 1 – Einzelne Ziele (Individual Targets)</b></div>
+  <div style="display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start;margin-bottom:24px">
+    <div style="font-size:13px;color:var(--sub);line-height:1.9">
+      <div style="color:var(--txt);font-weight:700;margin-bottom:8px">Regeln:</div>
+      <div style="margin-bottom:5px">• Ziel muss <b style="color:var(--gold)">vollständig</b> dem Schützen zugewandt sein</div>
+      <div style="margin-bottom:5px">• <b>Max. Höhe Oberkante:</b> IPSC Target = <b style="color:var(--green)">1,80 m</b> · Mini IPSC = <b style="color:var(--green)">1,60 m</b></div>
+      <div style="margin-bottom:5px">• Referenzpunkt = Schnittpunkt zweier Diagonalen der A-Zone</div>
+      <div style="margin-bottom:5px">• Ziele können <b>angewinkelt</b> werden, müssen aber erreichbar bleiben</div>
+      <div style="color:var(--red)">✗ Nur unterer Teil ohne A-Zone = <b>NICHT zulässig</b></div>
+    </div>
+    <div>
+      <svg width="150" height="100" viewBox="0 0 150 100" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(8,8)">
+          <rect x="0" y="0" width="36" height="48" rx="2" fill="#1f2328" stroke="#606878" stroke-width="1"/>
+          <ellipse cx="18" cy="13" rx="11" ry="9" fill="rgba(240,180,41,0.55)" stroke="#f0b429" stroke-width="1"/>
+          <rect x="5" y="24" width="26" height="16" rx="1" fill="rgba(74,158,255,0.18)" stroke="#4a9eff" stroke-width="0.5"/>
+          <text x="18" y="17" text-anchor="middle" fill="#f0b429" font-size="7" font-weight="bold" font-family="sans-serif">A</text>
+          <text x="18" y="34" text-anchor="middle" fill="#4a9eff" font-size="7" font-family="sans-serif">C</text>
+          <text x="18" y="44" text-anchor="middle" fill="#98a0ac" font-size="7" font-family="sans-serif">D</text>
+        </g>
+        <text x="26" y="70" text-anchor="middle" fill="#1ec97a" font-size="9" font-weight="bold" font-family="sans-serif">✓ OK</text>
+        <text x="26" y="82" text-anchor="middle" fill="#606878" font-size="8" font-family="sans-serif">Vollständig</text>
+        <g transform="translate(82,30)">
+          <rect x="0" y="0" width="36" height="26" rx="2" fill="#1f2328" stroke="#f04040" stroke-width="1"/>
+          <text x="18" y="16" text-anchor="middle" fill="#98a0ac" font-size="7" font-family="sans-serif">D only</text>
+          <rect x="0" y="-14" width="36" height="38" rx="2" fill="none" stroke="#f04040" stroke-width="1" stroke-dasharray="3,2"/>
+          <ellipse cx="18" cy="-5" rx="11" ry="9" fill="rgba(240,64,64,0.08)" stroke="#f04040" stroke-width="0.5" stroke-dasharray="2,2"/>
+          <text x="18" y="-8" text-anchor="middle" fill="#f04040" font-size="6" font-family="sans-serif">A fehlt</text>
+        </g>
+        <text x="100" y="70" text-anchor="middle" fill="#f04040" font-size="9" font-weight="bold" font-family="sans-serif">✗ NICHT OK</text>
+        <text x="100" y="82" text-anchor="middle" fill="#606878" font-size="8" font-family="sans-serif">Nur Unterkante</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- SECTION 2: Multiple Paper Targets -->
+  <div class="box-gold" style="margin-bottom:10px"><b>Abschnitt 2 – Mehrere Papierscheiben (Multiple Paper Targets)</b></div>
+  <div style="font-size:13px;color:var(--sub);line-height:1.9;margin-bottom:12px">
+    <div style="color:var(--txt);font-weight:700;margin-bottom:8px">Regeln:</div>
+    <div style="margin-bottom:5px">• Oberer Teil (A-Zone) jedes Ziels muss <b style="color:var(--gold)">immer sichtbar</b> sein</div>
+    <div style="margin-bottom:5px">• Ganzes Ziel als <b style="color:var(--red)">Hard Cover = NICHT zulässig</b></div>
+    <div style="margin-bottom:5px">• No-Shoot das ein Threat-Ziel <b>vollständig verdeckt = NICHT zulässig</b></div>
+    <div style="margin-bottom:5px">• <b>Überlappende Bereiche</b> zweier Ziele gelten als Hard Cover für das hintere</div>
+    <div style="color:var(--red)">✗ Arrays bei denen Pflicht-Treffer unmöglich sind = <b>NICHT zulässig (illogical)</b></div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px">
+    <div style="background:var(--p2);border:1px solid rgba(30,201,122,0.25);padding:12px;text-align:center;border-radius:4px">
+      <svg width="90" height="62" viewBox="0 0 90 62" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(5,5)">
+          <rect x="0" y="0" width="30" height="40" rx="2" fill="#1f2328" stroke="#606878" stroke-width="1"/>
+          <ellipse cx="15" cy="11" rx="9" ry="7" fill="rgba(240,180,41,0.5)" stroke="#f0b429" stroke-width="1"/>
+          <text x="15" y="15" text-anchor="middle" fill="#f0b429" font-size="7" font-family="sans-serif">A</text>
+        </g>
+        <g transform="translate(52,5)">
+          <rect x="0" y="0" width="30" height="40" rx="2" fill="#1f2328" stroke="#606878" stroke-width="1"/>
+          <ellipse cx="15" cy="11" rx="9" ry="7" fill="rgba(240,180,41,0.5)" stroke="#f0b429" stroke-width="1"/>
+          <text x="15" y="15" text-anchor="middle" fill="#f0b429" font-size="7" font-family="sans-serif">A</text>
+        </g>
+      </svg>
+      <div style="font-size:10px;color:var(--green);font-weight:700;margin-top:4px">✓ ZULÄSSIG</div>
+      <div style="font-size:10px;color:var(--muted);margin-top:2px">Nebeneinander</div>
+    </div>
+    <div style="background:var(--p2);border:1px solid var(--red3);padding:12px;text-align:center;border-radius:4px">
+      <svg width="90" height="62" viewBox="0 0 90 62" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(32,5)">
+          <rect x="0" y="0" width="30" height="40" rx="2" fill="#1f2328" stroke="#606878" stroke-width="1"/>
+          <ellipse cx="15" cy="11" rx="9" ry="7" fill="rgba(240,180,41,0.4)" stroke="#f0b429" stroke-width="0.7"/>
+        </g>
+        <g transform="translate(8,8)">
+          <rect x="0" y="0" width="30" height="40" rx="2" fill="rgba(30,201,122,0.12)" stroke="#1ec97a" stroke-width="1.5"/>
+          <text x="15" y="18" text-anchor="middle" fill="#1ec97a" font-size="7" font-family="sans-serif">HC</text>
+          <text x="15" y="30" text-anchor="middle" fill="#1ec97a" font-size="6" font-family="sans-serif">ganzes Ziel</text>
+        </g>
+        <line x1="2" y1="2" x2="88" y2="60" stroke="#f04040" stroke-width="1.5" opacity="0.5"/>
+        <line x1="88" y1="2" x2="2" y2="60" stroke="#f04040" stroke-width="1.5" opacity="0.5"/>
+      </svg>
+      <div style="font-size:10px;color:var(--red);font-weight:700;margin-top:4px">✗ NICHT OK</div>
+      <div style="font-size:10px;color:var(--muted);margin-top:2px">Ganzes Ziel als HC</div>
+    </div>
+    <div style="background:var(--p2);border:1px solid var(--red3);padding:12px;text-align:center;border-radius:4px">
+      <svg width="90" height="62" viewBox="0 0 90 62" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(28,5)">
+          <rect x="0" y="0" width="30" height="40" rx="2" fill="#1f2328" stroke="#606878" stroke-width="1"/>
+          <ellipse cx="15" cy="11" rx="9" ry="7" fill="rgba(240,180,41,0.4)" stroke="#f0b429" stroke-width="0.7"/>
+        </g>
+        <g transform="translate(25,3)">
+          <rect x="0" y="0" width="36" height="46" rx="2" fill="rgba(240,64,64,0.12)" stroke="#f04040" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <text x="18" y="20" text-anchor="middle" fill="#f04040" font-size="7" font-family="sans-serif">NS</text>
+          <text x="18" y="32" text-anchor="middle" fill="#f04040" font-size="6" font-family="sans-serif">deckt alles</text>
+        </g>
+        <line x1="2" y1="2" x2="88" y2="60" stroke="#f04040" stroke-width="1.5" opacity="0.5"/>
+        <line x1="88" y1="2" x2="2" y2="60" stroke="#f04040" stroke-width="1.5" opacity="0.5"/>
+      </svg>
+      <div style="font-size:10px;color:var(--red);font-weight:700;margin-top:4px">✗ NICHT OK</div>
+      <div style="font-size:10px;color:var(--muted);margin-top:2px">No-Shoot deckt Ziel</div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: Paper + Metal -->
+  <div class="box-gold" style="margin-bottom:10px"><b>Abschnitt 3 – Papier &amp; Stahl mischen (Paper &amp; Metal Targets)</b></div>
+  <div style="font-size:13px;color:var(--sub);line-height:1.9;margin-bottom:12px">
+    <div style="color:var(--txt);font-weight:700;margin-bottom:8px">Regeln:</div>
+    <div style="margin-bottom:5px">• Mischung erlaubt, wenn sie eine <b style="color:var(--gold)">praxisnahe Präsentation</b> bietet</div>
+    <div style="margin-bottom:5px">• Stahlziele müssen aus der Schusszone <b>erreichbar</b> sein</div>
+    <div style="margin-bottom:5px">• Kombinationen müssen <b>logisch und ausführbar</b> sein</div>
+    <div style="color:var(--green)">✓ IPSC Target + IPSC Popper im selben Array = zulässig</div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px">
+    <div style="background:var(--p2);border:1px solid rgba(30,201,122,0.25);padding:12px;text-align:center;border-radius:4px">
+      <svg width="130" height="72" viewBox="0 0 130 72" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(8,8)">
+          <rect x="0" y="0" width="32" height="44" rx="2" fill="#1f2328" stroke="#606878" stroke-width="1"/>
+          <ellipse cx="16" cy="11" rx="10" ry="8" fill="rgba(240,180,41,0.5)" stroke="#f0b429" stroke-width="1"/>
+          <text x="16" y="15" text-anchor="middle" fill="#f0b429" font-size="7" font-family="sans-serif">A</text>
+          <text x="16" y="58" text-anchor="middle" fill="#606878" font-size="7" font-family="sans-serif">Paper</text>
+        </g>
+        <g transform="translate(72,8)">
+          <polygon points="26,44 4,44 7,0 23,0" fill="#1f2328" stroke="#4a9eff" stroke-width="1.5"/>
+          <circle cx="15" cy="30" r="8" fill="rgba(74,158,255,0.2)" stroke="#4a9eff" stroke-width="1"/>
+          <text x="15" y="33" text-anchor="middle" fill="#4a9eff" font-size="6" font-family="sans-serif">KAL</text>
+          <rect x="2" y="44" width="26" height="4" rx="1" fill="#272c31" stroke="#606878" stroke-width="0.5"/>
+          <text x="15" y="58" text-anchor="middle" fill="#606878" font-size="7" font-family="sans-serif">Popper</text>
+        </g>
+      </svg>
+      <div style="font-size:10px;color:var(--green);font-weight:700;margin-top:2px">✓ ZULÄSSIG</div>
+      <div style="font-size:10px;color:var(--muted)">Papier + Stahl</div>
+    </div>
+    <div style="background:var(--p2);border:1px solid var(--red3);padding:12px;text-align:center;border-radius:4px">
+      <svg width="130" height="72" viewBox="0 0 130 72" xmlns="http://www.w3.org/2000/svg">
+        <rect x="56" y="0" width="14" height="62" fill="rgba(74,158,255,0.15)" stroke="#4a9eff" stroke-width="1"/>
+        <text x="63" y="68" text-anchor="middle" fill="#4a9eff" font-size="7" font-family="sans-serif">Wand</text>
+        <g transform="translate(76,10)">
+          <polygon points="26,44 4,44 7,0 23,0" fill="#1f2328" stroke="#606878" stroke-width="1" opacity="0.35"/>
+          <circle cx="15" cy="30" r="8" fill="rgba(74,158,255,0.08)" stroke="#606878" stroke-width="1" opacity="0.35"/>
+          <text x="15" y="58" text-anchor="middle" fill="#606878" font-size="7" font-family="sans-serif" opacity="0.5">Popper</text>
+        </g>
+        <line x1="2" y1="2" x2="128" y2="70" stroke="#f04040" stroke-width="1.5" opacity="0.4"/>
+        <line x1="128" y1="2" x2="2" y2="70" stroke="#f04040" stroke-width="1.5" opacity="0.4"/>
+      </svg>
+      <div style="font-size:10px;color:var(--red);font-weight:700;margin-top:2px">✗ NICHT OK</div>
+      <div style="font-size:10px;color:var(--muted)">Stahl nicht erreichbar</div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: Carnival Arrays -->
+  <div class="box-gold" style="margin-bottom:10px"><b>Abschnitt 4 – Karneval-Anordnungen (Carnival Target Arrays)</b></div>
+  <div style="font-size:13px;color:var(--sub);line-height:1.9;margin-bottom:12px">
+    <div style="color:var(--txt);font-weight:700;margin-bottom:8px">Regeln:</div>
+    <div style="margin-bottom:5px;color:var(--red)">✗ <b>Texas Stars</b> (rotierende Ziel-Mechanismen) = NICHT zulässig</div>
+    <div style="margin-bottom:5px;color:var(--red)">✗ <b>Plate Racks</b> mit mehr als 2 Platten auf gemeinsamem Gestell = NICHT zulässig</div>
+    <div style="margin-bottom:5px;color:var(--red)">✗ <b>Trees / Bobbing Targets</b> (mechanisch beweglich) = NICHT zulässig</div>
+    <div style="color:var(--green)">✓ <b>Max. 2 Metallplatten</b> auf gemeinsamer Basis = zulässig</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px">
+    <div style="background:var(--p2);border:1px solid var(--red3);padding:12px;text-align:center;border-radius:4px">
+      <svg width="80" height="72" viewBox="0 0 80 72" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="40" cy="36" r="4" fill="#272c31" stroke="#606878" stroke-width="1"/>
+        <line x1="40" y1="36" x2="40" y2="8" stroke="#606878" stroke-width="1.5"/>
+        <circle cx="40" cy="8" r="7" fill="#1f2328" stroke="#606878" stroke-width="1"/>
+        <line x1="40" y1="36" x2="66" y2="50" stroke="#606878" stroke-width="1.5"/>
+        <circle cx="66" cy="50" r="7" fill="#1f2328" stroke="#606878" stroke-width="1"/>
+        <line x1="40" y1="36" x2="14" y2="50" stroke="#606878" stroke-width="1.5"/>
+        <circle cx="14" cy="50" r="7" fill="#1f2328" stroke="#606878" stroke-width="1"/>
+        <line x1="40" y1="36" x2="64" y2="20" stroke="#606878" stroke-width="1.5"/>
+        <circle cx="64" cy="20" r="7" fill="#1f2328" stroke="#606878" stroke-width="1"/>
+        <line x1="40" y1="36" x2="16" y2="20" stroke="#606878" stroke-width="1.5"/>
+        <circle cx="16" cy="20" r="7" fill="#1f2328" stroke="#606878" stroke-width="1"/>
+        <text x="40" y="64" text-anchor="middle" fill="#f04040" font-size="10" font-family="sans-serif">↻</text>
+        <line x1="2" y1="2" x2="78" y2="70" stroke="#f04040" stroke-width="1.5" opacity="0.45"/>
+        <line x1="78" y1="2" x2="2" y2="70" stroke="#f04040" stroke-width="1.5" opacity="0.45"/>
+      </svg>
+      <div style="font-size:10px;color:var(--red);font-weight:700;margin-top:2px">✗ NICHT OK</div>
+      <div style="font-size:10px;color:var(--muted)">Texas Star</div>
+    </div>
+    <div style="background:var(--p2);border:1px solid var(--red3);padding:12px;text-align:center;border-radius:4px">
+      <svg width="80" height="72" viewBox="0 0 80 72" xmlns="http://www.w3.org/2000/svg">
+        <rect x="5" y="30" width="70" height="4" rx="1" fill="#272c31" stroke="#606878" stroke-width="1"/>
+        <circle cx="15" cy="20" r="8" fill="#1f2328" stroke="#606878" stroke-width="1"/>
+        <circle cx="29" cy="20" r="8" fill="#1f2328" stroke="#606878" stroke-width="1"/>
+        <circle cx="43" cy="20" r="8" fill="#1f2328" stroke="#606878" stroke-width="1"/>
+        <circle cx="57" cy="20" r="8" fill="#1f2328" stroke="#606878" stroke-width="1"/>
+        <line x1="15" y1="34" x2="15" y2="56" stroke="#606878" stroke-width="1.5"/>
+        <line x1="65" y1="34" x2="65" y2="56" stroke="#606878" stroke-width="1.5"/>
+        <line x1="2" y1="2" x2="78" y2="70" stroke="#f04040" stroke-width="1.5" opacity="0.45"/>
+        <line x1="78" y1="2" x2="2" y2="70" stroke="#f04040" stroke-width="1.5" opacity="0.45"/>
+      </svg>
+      <div style="font-size:10px;color:var(--red);font-weight:700;margin-top:2px">✗ NICHT OK</div>
+      <div style="font-size:10px;color:var(--muted)">Plate Rack (4+ Platten)</div>
+    </div>
+    <div style="background:var(--p2);border:1px solid rgba(30,201,122,0.25);padding:12px;text-align:center;border-radius:4px">
+      <svg width="80" height="72" viewBox="0 0 80 72" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="34" width="60" height="4" rx="1" fill="#272c31" stroke="#1ec97a" stroke-width="1"/>
+        <circle cx="25" cy="22" r="11" fill="#1f2328" stroke="#1ec97a" stroke-width="1.5"/>
+        <circle cx="55" cy="22" r="11" fill="#1f2328" stroke="#1ec97a" stroke-width="1.5"/>
+        <text x="25" y="26" text-anchor="middle" fill="#1ec97a" font-size="9" font-weight="bold" font-family="sans-serif">1</text>
+        <text x="55" y="26" text-anchor="middle" fill="#1ec97a" font-size="9" font-weight="bold" font-family="sans-serif">2</text>
+        <line x1="20" y1="38" x2="20" y2="58" stroke="#1ec97a" stroke-width="1.5"/>
+        <line x1="60" y1="38" x2="60" y2="58" stroke="#1ec97a" stroke-width="1.5"/>
+      </svg>
+      <div style="font-size:10px;color:var(--green);font-weight:700;margin-top:2px">✓ ZULÄSSIG</div>
+      <div style="font-size:10px;color:var(--muted)">Max. 2 Platten</div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: Mixed Target Types -->
+  <div class="box-gold" style="margin-bottom:10px"><b>Abschnitt 5 – Gemischte Zieltypen (Mixed Target Types)</b></div>
+  <div style="font-size:13px;color:var(--sub);line-height:1.9;margin-bottom:12px">
+    <div style="color:var(--txt);font-weight:700;margin-bottom:8px">Regeln:</div>
+    <div style="margin-bottom:5px;color:var(--red)">✗ IPSC Target + Mini IPSC Target <b>NICHT</b> im selben Array</div>
+    <div style="margin-bottom:5px;color:var(--red)">✗ IPSC Popper + Mini Popper <b>NICHT</b> im selben Array</div>
+    <div style="margin-bottom:5px;color:var(--green)">✓ IPSC Target + IPSC Popper = zulässig (gleiche Größenklasse)</div>
+    <div style="margin-bottom:5px;color:var(--green)">✓ Mini IPSC + Mini Popper = zulässig (gleiche Größenklasse)</div>
+    <div style="color:var(--green)">✓ Metallplatten (Standard) können mit beliebigen Papierzielen kombiniert werden</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:20px">
+    <div style="background:var(--p2);border:1px solid var(--red3);padding:12px;text-align:center;border-radius:4px">
+      <svg width="130" height="76" viewBox="0 0 130 76" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(5,5)">
+          <rect x="0" y="0" width="40" height="52" rx="2" fill="#1f2328" stroke="#606878" stroke-width="1"/>
+          <ellipse cx="20" cy="14" rx="13" ry="10" fill="rgba(240,180,41,0.45)" stroke="#f0b429" stroke-width="1"/>
+          <text x="20" y="18" text-anchor="middle" fill="#f0b429" font-size="8" font-family="sans-serif">A</text>
+          <text x="20" y="66" text-anchor="middle" fill="#606878" font-size="7" font-family="sans-serif">IPSC (45×57)</text>
+        </g>
+        <g transform="translate(62,18)">
+          <rect x="0" y="0" width="26" height="34" rx="2" fill="#1f2328" stroke="#606878" stroke-width="1"/>
+          <ellipse cx="13" cy="9" rx="8" ry="6" fill="rgba(240,180,41,0.3)" stroke="#f0b429" stroke-width="0.7" stroke-dasharray="2,1"/>
+          <text x="13" y="13" text-anchor="middle" fill="#f0b429" font-size="6" font-family="sans-serif">A</text>
+          <text x="13" y="52" text-anchor="middle" fill="#606878" font-size="7" font-family="sans-serif">Mini (30×37)</text>
+        </g>
+        <line x1="2" y1="2" x2="128" y2="74" stroke="#f04040" stroke-width="1.5" opacity="0.4"/>
+        <line x1="128" y1="2" x2="2" y2="74" stroke="#f04040" stroke-width="1.5" opacity="0.4"/>
+      </svg>
+      <div style="font-size:10px;color:var(--red);font-weight:700;margin-top:2px">✗ NICHT OK</div>
+      <div style="font-size:10px;color:var(--muted)">IPSC + Mini IPSC gemischt</div>
+    </div>
+    <div style="background:var(--p2);border:1px solid rgba(30,201,122,0.25);padding:12px;text-align:center;border-radius:4px">
+      <svg width="130" height="76" viewBox="0 0 130 76" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(5,5)">
+          <rect x="0" y="0" width="36" height="50" rx="2" fill="#1f2328" stroke="#606878" stroke-width="1"/>
+          <ellipse cx="18" cy="13" rx="11" ry="9" fill="rgba(240,180,41,0.5)" stroke="#f0b429" stroke-width="1"/>
+          <text x="18" y="17" text-anchor="middle" fill="#f0b429" font-size="7" font-family="sans-serif">A</text>
+          <text x="18" y="66" text-anchor="middle" fill="#606878" font-size="7" font-family="sans-serif">IPSC Target</text>
+        </g>
+        <g transform="translate(66,5)">
+          <polygon points="28,50 2,50 6,0 24,0" fill="#1f2328" stroke="#4a9eff" stroke-width="1.5"/>
+          <circle cx="15" cy="34" r="9" fill="rgba(74,158,255,0.2)" stroke="#4a9eff" stroke-width="1"/>
+          <text x="15" y="37" text-anchor="middle" fill="#4a9eff" font-size="6" font-family="sans-serif">KAL</text>
+          <rect x="0" y="50" width="30" height="4" rx="1" fill="#272c31" stroke="#4a9eff" stroke-width="0.5"/>
+          <text x="15" y="66" text-anchor="middle" fill="#606878" font-size="7" font-family="sans-serif">IPSC Popper</text>
+        </g>
+      </svg>
+      <div style="font-size:10px;color:var(--green);font-weight:700;margin-top:2px">✓ ZULÄSSIG</div>
+      <div style="font-size:10px;color:var(--muted)">IPSC Target + IPSC Popper</div>
+    </div>
+    <div style="background:var(--p2);border:1px solid var(--red3);padding:12px;text-align:center;border-radius:4px">
+      <svg width="130" height="76" viewBox="0 0 130 76" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(8,5)">
+          <polygon points="27,50 3,50 6,0 24,0" fill="#1f2328" stroke="#4a9eff" stroke-width="1.5"/>
+          <circle cx="15" cy="34" r="9" fill="rgba(74,158,255,0.2)" stroke="#4a9eff" stroke-width="1"/>
+          <rect x="1" y="50" width="28" height="4" rx="1" fill="#272c31" stroke="#4a9eff" stroke-width="0.5"/>
+          <text x="15" y="66" text-anchor="middle" fill="#606878" font-size="7" font-family="sans-serif">IPSC Popper</text>
+        </g>
+        <g transform="translate(72,20)">
+          <polygon points="18,30 2,30 4,0 16,0" fill="#1f2328" stroke="#606878" stroke-width="1" opacity="0.75"/>
+          <circle cx="10" cy="20" r="5" fill="rgba(74,158,255,0.12)" stroke="#606878" stroke-width="0.7" opacity="0.75"/>
+          <rect x="0" y="30" width="20" height="3" rx="1" fill="#272c31" stroke="#606878" stroke-width="0.5"/>
+          <text x="10" y="48" text-anchor="middle" fill="#606878" font-size="7" font-family="sans-serif">Mini Popper</text>
+        </g>
+        <line x1="2" y1="2" x2="128" y2="74" stroke="#f04040" stroke-width="1.5" opacity="0.4"/>
+        <line x1="128" y1="2" x2="2" y2="74" stroke="#f04040" stroke-width="1.5" opacity="0.4"/>
+      </svg>
+      <div style="font-size:10px;color:var(--red);font-weight:700;margin-top:2px">✗ NICHT OK</div>
+      <div style="font-size:10px;color:var(--muted)">IPSC + Mini Popper gemischt</div>
+    </div>
+    <div style="background:var(--p2);border:1px solid rgba(30,201,122,0.25);padding:12px;text-align:center;border-radius:4px">
+      <svg width="130" height="76" viewBox="0 0 130 76" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(8,14)">
+          <rect x="0" y="0" width="26" height="34" rx="2" fill="#1f2328" stroke="#606878" stroke-width="1"/>
+          <ellipse cx="13" cy="9" rx="8" ry="6" fill="rgba(240,180,41,0.45)" stroke="#f0b429" stroke-width="0.7"/>
+          <text x="13" y="13" text-anchor="middle" fill="#f0b429" font-size="6" font-family="sans-serif">A</text>
+          <text x="13" y="52" text-anchor="middle" fill="#606878" font-size="7" font-family="sans-serif">Mini Target</text>
+        </g>
+        <g transform="translate(72,22)">
+          <polygon points="18,30 2,30 4,0 16,0" fill="#1f2328" stroke="#1ec97a" stroke-width="1.5"/>
+          <circle cx="10" cy="20" r="5" fill="rgba(30,201,122,0.2)" stroke="#1ec97a" stroke-width="1"/>
+          <rect x="0" y="30" width="20" height="3" rx="1" fill="#272c31" stroke="#1ec97a" stroke-width="0.5"/>
+          <text x="10" y="50" text-anchor="middle" fill="#606878" font-size="7" font-family="sans-serif">Mini Popper</text>
+        </g>
+      </svg>
+      <div style="font-size:10px;color:var(--green);font-weight:700;margin-top:2px">✓ ZULÄSSIG</div>
+      <div style="font-size:10px;color:var(--muted)">Mini Target + Mini Popper</div>
+    </div>
+  </div>
+
+  <!-- Quick Reference Table -->
+  <div class="box-blue" style="margin-bottom:10px"><b>Schnellreferenz – Erlaubte Kombinationen (Target Array Book 2019)</b></div>
+  <div style="overflow-x:auto;margin-bottom:8px">
+    <table style="width:100%;border-collapse:collapse;font-size:12px">
+      <thead>
+        <tr style="background:var(--p3)">
+          <th style="padding:8px 10px;text-align:left;border:1px solid var(--b1);color:var(--sub);font-weight:600">Kombination</th>
+          <th style="padding:8px 10px;text-align:center;border:1px solid var(--b1);color:var(--sub);font-weight:600;white-space:nowrap">Zulässig</th>
+          <th style="padding:8px 10px;text-align:left;border:1px solid var(--b1);color:var(--sub);font-weight:600">Grundlage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:8px 10px;border:1px solid var(--b1)">IPSC Target + IPSC Popper</td><td style="padding:8px;border:1px solid var(--b1);text-align:center;color:var(--green);font-weight:700">✓</td><td style="padding:8px 10px;border:1px solid var(--b1);color:var(--sub)">Sec. 5 – gleiche Größenklasse</td></tr>
+        <tr style="background:var(--p2)"><td style="padding:8px 10px;border:1px solid var(--b1)">Mini IPSC Target + Mini Popper</td><td style="padding:8px;border:1px solid var(--b1);text-align:center;color:var(--green);font-weight:700">✓</td><td style="padding:8px 10px;border:1px solid var(--b1);color:var(--sub)">Sec. 5 – gleiche Größenklasse</td></tr>
+        <tr><td style="padding:8px 10px;border:1px solid var(--b1)">Metallplatten + beliebige Papierziele</td><td style="padding:8px;border:1px solid var(--b1);text-align:center;color:var(--green);font-weight:700">✓</td><td style="padding:8px 10px;border:1px solid var(--b1);color:var(--sub)">Sec. 5 – Platten neutral</td></tr>
+        <tr style="background:var(--p2)"><td style="padding:8px 10px;border:1px solid var(--b1)">Max. 2 Platten auf gemeinsamer Basis</td><td style="padding:8px;border:1px solid var(--b1);text-align:center;color:var(--green);font-weight:700">✓</td><td style="padding:8px 10px;border:1px solid var(--b1);color:var(--sub)">Sec. 4 – Karneval-Ausnahme</td></tr>
+        <tr><td style="padding:8px 10px;border:1px solid var(--b1)">IPSC Target + Mini IPSC Target</td><td style="padding:8px;border:1px solid var(--b1);text-align:center;color:var(--red);font-weight:700">✗</td><td style="padding:8px 10px;border:1px solid var(--b1);color:var(--sub)">Sec. 5 – verschiedene Größenklassen</td></tr>
+        <tr style="background:var(--p2)"><td style="padding:8px 10px;border:1px solid var(--b1)">IPSC Popper + Mini Popper</td><td style="padding:8px;border:1px solid var(--b1);text-align:center;color:var(--red);font-weight:700">✗</td><td style="padding:8px 10px;border:1px solid var(--b1);color:var(--sub)">Sec. 5 – verschiedene Größenklassen</td></tr>
+        <tr><td style="padding:8px 10px;border:1px solid var(--b1)">Texas Star / Plate Rack (&gt;2 Platten)</td><td style="padding:8px;border:1px solid var(--b1);text-align:center;color:var(--red);font-weight:700">✗</td><td style="padding:8px 10px;border:1px solid var(--b1);color:var(--sub)">Sec. 4 – Karneval-Anordnung</td></tr>
+        <tr style="background:var(--p2)"><td style="padding:8px 10px;border:1px solid var(--b1)">Ganzes Ziel als Hard Cover</td><td style="padding:8px;border:1px solid var(--b1);text-align:center;color:var(--red);font-weight:700">✗</td><td style="padding:8px 10px;border:1px solid var(--b1);color:var(--sub)">Sec. 2 – HC-Regel</td></tr>
+        <tr><td style="padding:8px 10px;border:1px solid var(--b1)">Ziel ohne A-Zone (nur Unterteil)</td><td style="padding:8px;border:1px solid var(--b1);text-align:center;color:var(--red);font-weight:700">✗</td><td style="padding:8px 10px;border:1px solid var(--b1);color:var(--sub)">Sec. 1 – A-Zone Pflicht</td></tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 <!-- DIVISIONEN -->

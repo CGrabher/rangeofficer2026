@@ -74,6 +74,24 @@ body.embedded .search-bar input{font-size:14px;color:var(--text)}
 body.embedded main{padding:.75rem 0 2rem;max-width:100%;min-height:unset}
 body.embedded{min-height:0!important}
 html.embedded{min-height:0!important;height:auto}
+@media(max-width:768px){
+header{padding:0 1rem;height:48px;}
+.badge{display:none;}
+.container{grid-template-columns:1fr;min-height:unset;}
+aside{position:static;height:auto;overflow-y:hidden;overflow-x:auto;border-right:none;border-bottom:1px solid var(--border);padding:8px 10px;display:flex;flex-wrap:nowrap;gap:4px;align-items:center;}
+aside::-webkit-scrollbar{height:2px;}
+.nav-label{display:none;}
+.nav-item{white-space:nowrap;border-left:none!important;padding:7px 12px;border-radius:6px;font-size:.8rem;flex-shrink:0;}
+.nav-item.active{background:var(--accent);color:#0b0d0f;border-left:none!important;}
+main{padding:1rem 1rem 3rem;}
+.sec-title{font-size:1.6rem;}
+.sec-header{margin-bottom:1.2rem;}
+.grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.8rem;}
+.grid.wide{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));}
+.card-img{min-height:110px;}
+.card-img img{max-height:150px;}
+.rule-block{flex-direction:column;gap:.4rem;}
+}
 </style>
 </head>
 <body>

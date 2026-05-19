@@ -59,6 +59,7 @@ main{padding:2.5rem 3rem;max-width:1200px;}
 .verdict.no{background:rgba(240,64,64,.12);color:var(--red);border:1px solid rgba(240,64,64,.3);}
 .modal-desc{font-family:var(--fm);font-size:.72rem;color:var(--text-muted);line-height:1.7;}
 .modal-ref{font-family:var(--fm);font-size:.62rem;color:var(--text-dim);margin-top:.5rem;}
+body.modal-open{overflow:hidden;position:fixed;width:100%;}
 /* EMBEDDED */
 body.embedded header{display:none}
 body.embedded .container{display:block;min-height:unset}
@@ -94,9 +95,9 @@ main{padding:1rem 1rem 3rem;}
 .modal-overlay{align-items:flex-end;padding:0;}
 .modal{max-width:100%;width:100%;border-radius:16px 16px 0 0;border-left:none;border-right:none;border-bottom:none;max-height:92vh;transform:translateY(40px);}
 .modal-overlay.open .modal{transform:translateY(0);}
-.modal-img{max-height:32vh;padding:.5rem;}
-.modal-img img{max-height:28vh;}
-.modal-body{overflow-y:auto;-webkit-overflow-scrolling:touch;flex:1;min-height:0;padding:1rem;padding-bottom:calc(env(safe-area-inset-bottom) + 2rem);}
+.modal-img{max-height:28vh;padding:.5rem;}
+.modal-img img{max-height:24vh;}
+.modal-body{overflow-y:scroll;-webkit-overflow-scrolling:touch;flex:1;min-height:0;padding:1rem;padding-bottom:calc(env(safe-area-inset-bottom) + 2rem);overscroll-behavior:contain;}
 }
 </style>
 </head>
@@ -286,8 +287,8 @@ function rg(gid){
 function rs(id){(SGRIDS[id]||[]).forEach(g=>rg(g));}
 function showSec(id){document.querySelectorAll('.section-panel').forEach(p=>p.classList.remove('active'));document.querySelectorAll('[id^=nav-]').forEach(n=>n.classList.remove('active'));document.getElementById(id).classList.add('active');document.getElementById('nav-'+id).classList.add('active');cS=id;rs(id);}
 function setFilter(f){cF=f;document.querySelectorAll('[id^=f-]').forEach(e=>e.classList.remove('active'));document.getElementById('f-'+f).classList.add('active');rs(cS);}
-function om(n){const m=gm(n);if(!m)return;const img=IMGS[String(n)];document.getElementById('mImg').innerHTML=`<img src="${img}" alt="${n}"/>`;document.getElementById('mTitle').textContent='Beispiel #'+n;document.getElementById('mVerdict').innerHTML=`<div class="verdict ${m.ok?'ok':'no'}">${m.ok?'✓ ACCEPTABLE':'✗ NOT ACCEPTABLE'}</div>`;document.getElementById('mDesc').textContent=m.desc;document.getElementById('mRef').textContent=m.rule?'Regelabschnitt '+m.rule:'';document.getElementById('mOverlay').classList.add('open');}
-function closeModal(){document.getElementById('mOverlay').classList.remove('open');}
+function om(n){const m=gm(n);if(!m)return;const img=IMGS[String(n)];document.getElementById('mImg').innerHTML=`<img src="${img}" alt="${n}"/>`;document.getElementById('mTitle').textContent='Beispiel #'+n;document.getElementById('mVerdict').innerHTML=`<div class="verdict ${m.ok?'ok':'no'}">${m.ok?'✓ ACCEPTABLE':'✗ NOT ACCEPTABLE'}</div>`;document.getElementById('mDesc').textContent=m.desc;document.getElementById('mRef').textContent=m.rule?'Regelabschnitt '+m.rule:'';document.getElementById('mOverlay').classList.add('open');document.body.classList.add('modal-open');}
+function closeModal(){document.getElementById('mOverlay').classList.remove('open');document.body.classList.remove('modal-open');}
 document.getElementById('mOverlay').addEventListener('click',function(e){if(e.target===this)closeModal();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
 rs('s1');document.getElementById('f-all').classList.add('active');
